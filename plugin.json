@@ -1,0 +1,23 @@
+{
+    "pluginName": "timestamp2date",
+    "description": "tiemstamp 转日期插件",
+    "author": "recall",
+    "homepage": "https://github.com/recall704/utools-timestamp",
+    "logo": "logo.png",
+    "preload": "preload.js",
+    "features": [
+        {
+            "code": "ts",
+            "explain": "timestamp 转日期",
+            "cmds": [
+                "ts",
+                {
+                    "type": "over",
+                    "label": "timestamp",
+                    "minLength": 10,
+                    "maxLength": 64
+                }
+            ]
+        }
+    ]
+}
