@@ -18,8 +18,8 @@ function parserTimestamp(inputTimestamp, callbackSetList) {
     // var a = new Date(inputTimestamp * 1000);
     // let result = dateFormat("YY-mm-dd HH:MM:SS",a)
     // console.log(result);
-    // 1627102189
-    // 1627102258057
+    // 1627102189   =>  2021-07-24 12:49:49
+    // 1627102258057  => 2021-07-24 12:50:58
     // 1627102258.057
     // 2021-07-24 12:58:27
     // 2021-07-24 12:58:27.600
@@ -31,8 +31,8 @@ function parserTimestamp(inputTimestamp, callbackSetList) {
 
         // 如果整数部分长度大于等于 10， 需要保留 10 位
         if (inputTimestamp / Math.pow(10, 10) > 0) {
-            let ut = inputTimestamp / Math.pow(10, (inputTimestamp.length - 10))
-            console.log(ut)
+            let ut = inputTimestamp / Math.pow(10, (parseInt(inputTimestamp).toString().length - 10))
+            console.log("ut",ut)
             let m = moment.unix(ut)
             if (m.isValid()) {
                 title = m.format("YYYY-MM-DD HH:mm:ss.SS")
